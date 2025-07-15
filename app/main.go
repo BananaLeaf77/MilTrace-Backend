@@ -16,7 +16,8 @@ import (
 func main() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("Error loading .env")
+		// log.Fatal("Error loading .env")
+		log.Println("No .env file found, using environment variables")
 	}
 	log.Println("🚀 Starting MilTrace Backend...")
 
@@ -26,7 +27,8 @@ func main() {
 func StartHTTP() {
 	db, err := config.BootDB()
 	if err != nil {
-		log.Fatalf("Failed to Boot DB ⛔, err: %s", err)
+		// log.Fatalf("Failed to Boot DB ⛔, err: %s", err)
+		log.Println("Failed to Boot DB ⛔, err:", err)
 	}
 
 	tracerRepo := repository.NewDeviceRepository(db)
