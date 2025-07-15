@@ -18,6 +18,9 @@ func GetDatabaseURL() string {
 }
 
 func BootDB() (*gorm.DB, error) {
+	log.Println("🔌 Connecting to DB...")
+	log.Println("🧪 ENV HOST =", os.Getenv("DB_HOST"))
+
 	url := GetDatabaseURL()
 	db, err := gorm.Open(postgres.Open(url))
 	if err != nil {

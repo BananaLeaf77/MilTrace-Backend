@@ -18,6 +18,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env")
 	}
+	log.Println("🚀 Starting MilTrace Backend...")
 
 	StartHTTP()
 }
