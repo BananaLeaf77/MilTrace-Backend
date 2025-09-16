@@ -4,6 +4,7 @@ This is the **MilTrace Backend**, a Go-based REST API server built with [Gin](ht
 It was intended to serve as a backend service for tracking devices, handling HTTP requests, and connecting to a PostgreSQL database.
 
 ⚠️ **Note:** This project is no longer maintained and **does not currently work**. The code is kept here for reference.
+The Hardware (my ESP 32 that suppose to hit these endpoints did not work anymore so idk if this backend still fit for it)
 
 ---
 
